@@ -6,6 +6,8 @@ output: html_document
 
 Encounter reasons and visits by date from a simulated population of 10k Rhode Islanders. 
 
+Data simulated using synthea: https://github.com/synthetichealth/synthea
+
 ```{r include=FALSE}
 library(tidyverse)
 library(lubridate)

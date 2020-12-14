@@ -1,5 +1,6 @@
 ## Import visits_by_date.csv
 visits_by_date<- read_csv('visits_by_date.csv')
+# Data simulated using synthea: https://github.com/synthetichealth/synthea
 
 # Filter by year
 # exactly 2020

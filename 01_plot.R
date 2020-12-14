@@ -8,6 +8,7 @@ library(lubridate)
 
 #####
 #2. Import the data in visits_by_hospital.csv and 
+# Data simulated using synthea: https://github.com/synthetichealth/synthea
 #####
 
 
