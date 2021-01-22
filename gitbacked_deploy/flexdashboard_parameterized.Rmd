@@ -19,10 +19,20 @@ library(tidyverse)
 library(lubridate)
 library(plotly)
 
-year <- '2020'
-hospital <- 'rhode island hospital'
+year <- params$year
+hospital <- params$hospital
 
-data <- read_csv('simulated_patient_data.csv') %>% 
+# Get pinned data
+
+board_register("rsconnect",
+               server = Sys.getenv("CONNECT_SERVER"),
+               key = Sys.getenv("CONNECT_SERVER_KEY"))
+
+
+pin <- pin_get("simulated_hospital_visits", board = "rsconnect")
+  
+  
+data <- pin %>% 
   mutate(start_date = as_date(start)) %>% 
   filter(year(start)==year, name == hospital)
 
