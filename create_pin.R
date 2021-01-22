@@ -1,11 +1,11 @@
 library(pins)
 library(tidyverse)
 
-connectAPIKey <- Sys.getenv("CONNECT_SERVER_KEY")
+
 
 board_register("rsconnect",
                server = Sys.getenv("CONNECT_SERVER"),
-               key = connectAPIKey)
+               key = Sys.getenv("CONNECT_SERVER_KEY"))
 
 
 
